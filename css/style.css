@@ -1,0 +1,40 @@
+@import url("header.css");
+@import url("footer.css");
+
+:root{
+    --DeepSkyBlue: #00BFFF;
+    --DodgerBlue: #1E90FF;
+    --LightGray: #D3D3D3;
+    --DarkGrey:	#A9A9A9;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font: 18px "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.content {
+    flex: 1 0 auto;
+}
+
+.container {
+
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
+}
+

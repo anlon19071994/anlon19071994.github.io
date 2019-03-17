@@ -1,0 +1,139 @@
+body {
+    font: 18px "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+}
+
+/*.con {*/
+    /*width: 90%;*/
+    /*margin: 0 auto;*/
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    /*flex-wrap: wrap;*/
+/*}*/
+
+.block {
+    display: flex;
+   *justify-content: space-around;
+    flex-wrap: wrap;
+}
+.catalog__itam, .catalog__description {
+    position: relative;
+    width: 20%;
+    height: 250px;
+    overflow: hidden;
+    margin: 2em;
+}
+
+.anons {
+    width: 100%;
+    transition: all 0.5s;
+    position: absolute;
+}
+
+.anons:after {
+    content: "→";
+    font-size: 2em;
+    display: block;
+    text-align: center;
+}
+
+img {
+    width: 37%;
+    display: block;
+    margin: 0 auto;
+}
+
+.catalog__header {
+    text-align: center;
+}
+
+.catalog__itam:hover .anons {
+    opacity: 1;
+    transform: translate(100%,0);
+}
+
+.catalog__itam:hover .info {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.info {
+    width: 100%;
+    height: 200px;
+
+    transition: all 0.5s;
+    transform: translate(-101%,0);
+    opacity: 1;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.catalog__smartphone {
+    background: url("./../image/catalog/smartphone.jpg") no-repeat top left;
+    background-size: 100% 100%;
+}
+
+.catalog__notebooks {
+    background: url("./../image/catalog/notebooks.jpg") no-repeat top left;
+    background-size: 100% 100%;
+}
+
+.catalog__tablet {
+    background: url("./../image/catalog/tablet.jpg") no-repeat top left;
+    background-size: 100% 100%;
+}
+
+.catalog__monoblock {
+    background: url("./../image/catalog/monoblock.jpg") no-repeat top left;
+    background-size: 100% 100%;
+}
+
+.catalog__accessories {
+    background: url("./../image/catalog/accessories.jpg") no-repeat top left;
+    background-size: 100% 100%;
+}
+
+.catalog__tv {
+    background: url("./../image/catalog/tv.jpg") no-repeat top left;
+    background-size: 100% 100%;
+}
+
+.catalog__photo-camera {
+    background: url("./../image/catalog/photo-camera.jpg") no-repeat top left;
+    background-size: 100% 100%;
+}
+
+.info p {
+    color: white;
+    padding: 1em;
+}
+
+.info a {
+    padding: 0.5em 1em;
+    margin-left: 1em;
+    background: #3074b9;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.info a:hover {
+    background: #3b91e3;
+}
+
+
+@media (max-device-width: 1100px) {
+    .catalog__itam {
+        width: 27%;
+    }
+}
+
+@media (max-device-width: 800px) {
+    .catalog__itam {
+        width: 50%;
+    }
+}

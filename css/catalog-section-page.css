@@ -1,0 +1,122 @@
+body {
+    font: 18px "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+}
+
+.catalog {
+    color: black;
+    background: white;
+    text-align: center;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.catalog h2 {
+    padding-top: 2em ;
+    font-size: 2em;
+    margin: 0;
+}
+.catalog__item {
+    width: 30%;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: 85%;
+    object-fit: contain;
+}
+.catalog__text {
+    text-align: center;
+}
+
+.price {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.description,
+#description1:checked ~ .description,
+#description2:checked ~ .description,
+#description3:checked ~ .description,
+#description4:checked ~ .description,
+#description5:checked ~ .description,
+#description6:checked ~ .description,
+#description7:checked ~ .description,
+#description8:checked ~ .description,
+#description9:checked ~ .description {
+    visibility: visible;
+    width:100%;
+    position: absolute;
+    top: 35%;
+    background: white;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0.8;
+}
+.description {
+    opacity: 0;
+    visibility: hidden;
+}
+
+input {
+    display: none;
+}
+
+.catalog__label {
+    background: var(--DodgerBlue);
+    border-radius: 50%;
+    width: 3.5em;
+    height: 3.5em;
+    position: absolute;
+    top: 69%;
+    left: -10%;
+    z-index: 1;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.5s;
+}
+
+.catalog__label:after {
+
+    content: '\002B';
+    font-size: 3em;
+
+    color: white;
+    /*font-weight: bold;*/
+
+
+}
+
+#description1:checked ~ label,
+#description2:checked ~ label,
+#description3:checked ~ label,
+#description4:checked ~ label,
+#description5:checked ~ label,
+#description6:checked ~ label,
+#description7:checked ~ label,
+#description8:checked ~ label,
+#description9:checked ~ label	{
+    transform: rotate(45deg);
+}
+
+@media (max-device-width: 1100px) {
+    .catalog__item {
+        flex-basis: 35%;
+    }
+}
+@media (max-device-width: 878px) {
+    .catalog__item {
+        flex-basis: 70%;
+    }
+}

@@ -1,0 +1,131 @@
+body {
+    font: 18px "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+}
+
+h2 {
+    padding: 1em 0;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+/*.con {*/
+    /*width: 80%;*/
+    /*margin: 0 auto;*/
+/*}*/
+
+.service {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1rem;
+
+}
+
+input {
+    display: none;
+}
+
+label {
+    margin: 0 1em;
+    padding: 0.3em 0em;
+    font-size: 1.3em;
+    line-height: 1.9em;
+}
+
+input:checked + label {
+    box-shadow:0px 2px 0px 0px white;
+}
+
+label:hover {
+    color: #d3d3d3;
+}
+
+.service__item {
+    display: none;
+    margin: 4em 0;
+}
+
+img {
+    width: 36%;
+    margin: auto;
+}
+
+#smart:checked ~ .smartphone, #mono:checked ~ .monoblock, #notebook:checked ~ .notebook,
+#tv:checked ~ .tv, #tablets:checked ~ .tablet, #foto:checked ~ .photo-camera, #accessories:checked ~ .accessories {
+    display: flex;
+    align-items: center;
+}
+
+/*table {*/
+    /*display: inline-block;*/
+    /*vertical-align: top;*/
+    /*width: 59%;*/
+    /*background: #333;*/
+    /*color: #d3d3d3;*/
+    /*padding: 1em;*/
+/*}*/
+
+td {
+    padding: 0 0.5em;
+
+}
+
+.info {
+    background: #333;
+    display: flex;
+    width: 63%;
+    vertical-align: top;
+    color: #d3d3d3;
+    /*margin-top: 11em;*/
+}
+
+.col1, .col2 {
+    flex-basis: 50%;
+    vertical-align: top;
+    padding: 0 1em;
+
+}
+
+.header-service {
+    /*display: inline-block;*/
+    /*width: 67%;*/
+    font-weight: bold;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+.price {
+    /*display: inline-block;*/
+    /*width: 32%;*/
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+.service__description p {
+    margin-top: 0px;
+}
+
+
+@media (max-width: 850px) {
+    .service__item {
+        flex-direction: column;
+
+    }
+    img, .info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .info {
+        display: block;
+
+    }
+}
